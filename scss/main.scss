@@ -1,0 +1,129 @@
+@import 'variables';
+@import 'functions';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+body {
+  background: $color;
+  color: $color2;
+  text-align: center;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 100%;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  p {
+    background-color: teal;
+    color: set-text-color(teal);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .text {
+    margin: 20px;
+  }
+}
+
+img {
+  max-width: 50%;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 100vh;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// Section
+
+header {
+  background-color: $secondary-color;
+  color: set-text-color($secondary-color);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.section {
+  padding: 3rem;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    background-color: #364855;
+    color: set-text-color(#364855);
+    padding: 20px 40px;
+    border-radius: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  &-a {
+    background-color: lightblue;
+  }
+
+  &-b {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    line-height: 2.2;
+    letter-spacing: 0.9px;
+  }
+}
+
+// Button
+%btn-shared {
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn {
+  &-light {
+    @extend %btn-shared;
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    margin: 20px 0;
+
+    &:hover {
+      // margin: 20px 0;
+      background-color: lighten(teal, 20%);
+      @include transform(rotate(20deg));
+    }
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background-color: #666;
+    color: #eee;
+    letter-spacing: 1.5px;
+    border-radius: 8px;
+    margin: 20px 0;
+
+    &:hover {
+      // margin: 20px 0;
+      background-color: lighten(teal, 10%);
+      @include transform(rotate(-20deg));
+    }
+  }
+}
