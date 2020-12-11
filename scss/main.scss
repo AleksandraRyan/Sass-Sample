@@ -130,7 +130,7 @@ header {
 
 // Form
 form {
-  background: tomato;
+  // background: tomato;
   padding: 30px;
 
   label {
@@ -138,8 +138,12 @@ form {
     margin: 10px;
   }
 
-  input[placeholder] {
-    text-align: center;
+  input {
+    border: none;
+    border-radius: 5px;
+  }
+
+  input {
     font-family: sans-serif;
     font-size: 15px;
     padding: 10px 40px;
@@ -152,21 +156,30 @@ form {
     padding: 10px 60px;
     border: none;
     border-radius: 20px;
-    background: yellow;
+    background: linear-gradient(
+      90deg,
+      rgb(243, 115, 136),
+      rgb(236, 236, 116),
+      rgb(28, 151, 165)
+    );
     color: #000;
     outline: 0;
     cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
   }
 
   textarea {
     display: block;
     margin: 10px auto;
     outline: 0;
+    border: none;
+    border-radius: 5px;
   }
 
-  textarea[placeholder] {
-    text-align: center;
+  textarea {
     font-size: 15px;
     font-family: sans-serif;
     padding: 10px 0;
